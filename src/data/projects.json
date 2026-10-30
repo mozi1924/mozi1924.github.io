@@ -2,6 +2,8 @@
   {
     "name": "Qwen3-TTS-EasyFinetuning",
     "slug": "qwen3-tts-easyfinetuning",
+    "pinned": true,
+    "pinnedOrder": 2,
     "description": "Easy fine-tuning for Qwen3-TTS: Fast voice cloning and high-quality multilingual speech synthesis.",
     "repoUrl": "https://github.com/mozi1924/Qwen3-TTS-EasyFinetuning",
     "homepage": "",
@@ -34,6 +36,8 @@
   {
     "name": "openblive",
     "slug": "openblive",
+    "pinned": true,
+    "pinnedOrder": 3,
     "description": "B站 / 哔哩哔哩直播开播助手，支持 OBS 开播联动、直播姬工作流补充、多账号管理、弹幕互动、房间管理与 Overlay 接入",
     "repoUrl": "https://github.com/mozi1924/openblive",
     "homepage": "https://mozi1924.com/blogs/openblive-studio/",
@@ -63,6 +67,8 @@
   {
     "name": "mediapipe-facecap-for-blender",
     "slug": "mediapipe-facecap-for-blender",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "This is a mediapipe based face capture for Blender and more platforms in the future",
     "repoUrl": "https://github.com/mozi1924/mediapipe-facecap-for-blender",
     "homepage": "",
@@ -83,6 +89,8 @@
   {
     "name": "MoziToolKit",
     "slug": "mozitoolkit",
+    "pinned": true,
+    "pinnedOrder": 0,
     "description": "面向 Blender 5.0+ (LTS) 的高性能 Minecraft 资产处理、规范 PBR 着色器管线与实时协同插件前端。由 libmozitoolkit (Rust) 驱动，配合 Yefira 模组实现双向 Live Sync。",
     "repoUrl": "https://github.com/mozi1924/MoziToolKit",
     "homepage": "https://github.com/mozi1924/MoziToolKit",
@@ -111,6 +119,8 @@
   {
     "name": "yefira",
     "slug": "yefira",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "高性能、低延迟 Minecraft 实时协同伴生模组，直连 Blender (MoziToolKit)。支持 Fabric / Forge / NeoForge 跨 1.20 ~ 26.2+ 多版本。",
     "repoUrl": "https://github.com/mozi1924/yefira",
     "homepage": "https://github.com/mozi1924/yefira",
@@ -138,6 +148,8 @@
   {
     "name": "rig2_addons",
     "slug": "rig2_addons",
+    "pinned": true,
+    "pinnedOrder": 1,
     "description": "The BEST Blender Minecraft Rig addons mozi ever made",
     "repoUrl": "https://github.com/mozi1924/rig2_addons",
     "homepage": "https://mozi1924.com/mozi-rig",
@@ -159,6 +171,8 @@
   {
     "name": "micro-app-store",
     "slug": "micro-app-store",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "MIUI Home第三方应用商店",
     "repoUrl": "https://github.com/mozi1924/micro-app-store",
     "homepage": "",
@@ -174,6 +188,8 @@
   {
     "name": "libmozitoolkit",
     "slug": "libmozitoolkit",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "高性能宿主无关的 Minecraft 3D 体素几何与资产处理 Rust 核心引擎，MoziToolKit (Blender) 扩展与 Yefira 实时协同底座。",
     "repoUrl": "https://github.com/mozi1924/libmozitoolkit",
     "homepage": "https://github.com/mozi1924/libmozitoolkit",
@@ -202,6 +218,8 @@
   {
     "name": "fzs-driver-rs",
     "slug": "fzs-driver-rs",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "完全开源、纯离线、尊重隐私的“夫子说 / 老师说 / 夫子机系列”（如 FZS-C3100A、FZJJ、FZXX）热敏打印机 Rust 重构驱动、后台守护进程与 macOS / Linux CUPS 系统打印集成。",
     "repoUrl": "https://github.com/mozi1924/fzs-driver-rs",
     "homepage": "",
@@ -224,6 +242,8 @@
   {
     "name": "build-agy",
     "slug": "build-agy",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "Automated packaging pipeline and community repository (APT & RPM) for Google Antigravity components on Linux: Antigravity IDE, Antigravity 2.0 (Hub), and Antigravity CLI.",
     "repoUrl": "https://github.com/mozi1924/build-agy",
     "homepage": "https://mozi1924.github.io/build-agy/",
@@ -244,6 +264,8 @@
   {
     "name": "mozi1924",
     "slug": "mozi1924",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "Config and website files for my GitHub profile.",
     "repoUrl": "https://github.com/mozi1924/mozi1924",
     "homepage": "https://mozi1924.com/",
@@ -265,6 +287,8 @@
   {
     "name": "side-route-daemon",
     "slug": "side-route-daemon",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/side-route-daemon",
     "homepage": "",
@@ -280,6 +304,8 @@
   {
     "name": "debian-cloud-images",
     "slug": "debian-cloud-images",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/debian-cloud-images",
     "homepage": "",
@@ -295,6 +321,8 @@
   {
     "name": "AgentJax",
     "slug": "agentjax",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/AgentJax",
     "homepage": "",
@@ -310,6 +338,8 @@
   {
     "name": "literag-mcp",
     "slug": "literag-mcp",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/literag-mcp",
     "homepage": "",
@@ -325,6 +355,8 @@
   {
     "name": "infinite-inbox",
     "slug": "infinite-inbox",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/infinite-inbox",
     "homepage": "",
@@ -340,6 +372,8 @@
   {
     "name": "bldoc4agent",
     "slug": "bldoc4agent",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/bldoc4agent",
     "homepage": "",
@@ -355,6 +389,8 @@
   {
     "name": "mi2bl",
     "slug": "mi2bl",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/mi2bl",
     "homepage": "",
@@ -370,6 +406,8 @@
   {
     "name": "worker-comment",
     "slug": "worker-comment",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/worker-comment",
     "homepage": "",
@@ -385,6 +423,8 @@
   {
     "name": "Vercel-Email-routing",
     "slug": "vercel-email-routing",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/Vercel-Email-routing",
     "homepage": "https://vercel-email-routing.vercel.app",
@@ -400,6 +440,8 @@
   {
     "name": "text2arch",
     "slug": "text2arch",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "Text to Arch(Base4) Encryption/Decryption",
     "repoUrl": "https://github.com/mozi1924/text2arch",
     "homepage": "https://text2arch.mozi1924.com/",
@@ -421,6 +463,8 @@
   {
     "name": "jaxlocke.uk",
     "slug": "jaxlockeuk",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "Jax Locke's website",
     "repoUrl": "https://github.com/mozi1924/jaxlocke.uk",
     "homepage": "",
@@ -436,6 +480,8 @@
   {
     "name": "natmap-git",
     "slug": "natmap-git",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/natmap-git",
     "homepage": "",
@@ -451,6 +497,8 @@
   {
     "name": "mozi-rig-doc",
     "slug": "mozi-rig-doc",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/mozi-rig-doc",
     "homepage": "",
@@ -466,6 +514,8 @@
   {
     "name": "mc.tlilng.xyz",
     "slug": "mctlilngxyz",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "",
     "repoUrl": "https://github.com/mozi1924/mc.tlilng.xyz",
     "homepage": "",
@@ -481,6 +531,8 @@
   {
     "name": "www.arasaka.ltd",
     "slug": "wwwarasakaltd",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "www.arasaka.ltd 's static pages",
     "repoUrl": "https://github.com/mozi1924/www.arasaka.ltd",
     "homepage": "",
@@ -496,6 +548,8 @@
   {
     "name": "hls_player",
     "slug": "hls_player",
+    "pinned": false,
+    "pinnedOrder": -1,
     "description": "简单的hls播放器页面，支持深色和亮色模式跟随系统，响应式设计适配桌面端和移动端",
     "repoUrl": "https://github.com/mozi1924/hls_player",
     "homepage": "",

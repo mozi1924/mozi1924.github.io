@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-10-30T14:44:02.678Z",
+  "updatedAt": "2026-10-30T14:55:29.376Z",
   "totalProjects": 27,
   "totalStars": 154,
   "totalForks": 27,
+  "pinnedProjects": [
+    "MoziToolKit",
+    "rig2_addons",
+    "Qwen3-TTS-EasyFinetuning",
+    "openblive"
+  ],
   "languages": {
     "Python": 8,
     "Rust": 4,

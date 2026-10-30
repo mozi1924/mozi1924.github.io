@@ -7,6 +7,8 @@ const projects = defineCollection({
     title: z.string(),
     name: z.string(),
     slug: z.string().optional(),
+    pinned: z.boolean().default(false),
+    pinnedOrder: z.number().default(-1),
     description: z.string().optional().default(''),
     repoUrl: z.string(),
     homepage: z.string().optional().nullable().default(''),

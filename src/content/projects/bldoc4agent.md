@@ -2,6 +2,8 @@
 title: "bldoc4agent"
 name: "bldoc4agent"
 slug: "bldoc4agent"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/bldoc4agent"
 homepage: ""

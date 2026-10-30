@@ -2,6 +2,8 @@
 title: "debian-cloud-images"
 name: "debian-cloud-images"
 slug: "debian-cloud-images"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/debian-cloud-images"
 homepage: ""

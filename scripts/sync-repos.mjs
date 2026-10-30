@@ -111,13 +111,60 @@ async function fetchReadme(owner, repo) {
   return await res.text();
 }
 
+async function fetchPinnedRepos() {
+  console.log(`[Sync] Fetching pinned repositories via GitHub GraphQL API...`);
+  const query = `
+    query {
+      user(login: "${USERNAME}") {
+        pinnedItems(first: 6, types: REPOSITORY) {
+          nodes {
+            ... on Repository {
+              name
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  try {
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        ...HEADERS,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    });
+
+    if (!res.ok) {
+      console.warn(`[Sync] GraphQL request failed (${res.status}), skipping pinned repos.`);
+      return [];
+    }
+
+    const data = await res.json();
+    const nodes = data?.data?.user?.pinnedItems?.nodes || [];
+    const pinnedNames = nodes.map((n) => n.name).filter(Boolean);
+    console.log(`[Sync] Found ${pinnedNames.length} pinned repositories on profile:`, pinnedNames);
+    return pinnedNames;
+  } catch (err) {
+    console.warn('[Sync] Warning: Failed to fetch pinned repositories:', err.message);
+    return [];
+  }
+}
+
 async function main() {
   const projectsDir = path.join(rootDir, 'src', 'content', 'projects');
   const dataDir = path.join(rootDir, 'src', 'data');
   await fs.mkdir(projectsDir, { recursive: true });
   await fs.mkdir(dataDir, { recursive: true });
 
-  const rawRepos = await fetchAllRepos();
+  const [rawRepos, pinnedRepoNames] = await Promise.all([
+    fetchAllRepos(),
+    fetchPinnedRepos(),
+  ]);
+
+  const pinnedSet = new Set(pinnedRepoNames);
 
   // Filter out blacklisted and forked repositories (keeping user's original work)
   const repos = rawRepos.filter((r) => {
@@ -155,6 +202,8 @@ async function main() {
       }\n\n[View original repository on GitHub](${repo.html_url})\n`;
     }
 
+    const isPinned = pinnedSet.has(repo.name);
+    const pinnedOrder = isPinned ? pinnedRepoNames.indexOf(repo.name) : -1;
     const slug = slugify(repo.name);
     const topicsJson = JSON.stringify(repo.topics || []);
     const frontmatter = [
@@ -162,6 +211,8 @@ async function main() {
       `title: ${yamlEscape(repo.name)}`,
       `name: ${yamlEscape(repo.name)}`,
       `slug: ${yamlEscape(slug)}`,
+      `pinned: ${isPinned ? 'true' : 'false'}`,
+      `pinnedOrder: ${pinnedOrder}`,
       `description: ${yamlEscape(repo.description || '')}`,
       `repoUrl: ${yamlEscape(repo.html_url)}`,
       `homepage: ${yamlEscape(repo.homepage || '')}`,
@@ -184,6 +235,8 @@ async function main() {
     projectSummaries.push({
       name: repo.name,
       slug,
+      pinned: isPinned,
+      pinnedOrder,
       description: repo.description || '',
       repoUrl: repo.html_url,
       homepage: repo.homepage || '',
@@ -213,6 +266,7 @@ async function main() {
     totalProjects: projectSummaries.length,
     totalStars,
     totalForks,
+    pinnedProjects: pinnedRepoNames,
     languages: languageStats,
   };
 

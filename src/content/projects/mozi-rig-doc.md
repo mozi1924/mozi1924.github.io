@@ -2,6 +2,8 @@
 title: "mozi-rig-doc"
 name: "mozi-rig-doc"
 slug: "mozi-rig-doc"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/mozi-rig-doc"
 homepage: ""

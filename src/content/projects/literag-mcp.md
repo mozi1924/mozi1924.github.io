@@ -2,6 +2,8 @@
 title: "literag-mcp"
 name: "literag-mcp"
 slug: "literag-mcp"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/literag-mcp"
 homepage: ""

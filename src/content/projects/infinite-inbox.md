@@ -2,6 +2,8 @@
 title: "infinite-inbox"
 name: "infinite-inbox"
 slug: "infinite-inbox"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/infinite-inbox"
 homepage: ""

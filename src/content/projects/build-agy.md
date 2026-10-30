@@ -2,6 +2,8 @@
 title: "build-agy"
 name: "build-agy"
 slug: "build-agy"
+pinned: false
+pinnedOrder: -1
 description: "Automated packaging pipeline and community repository (APT & RPM) for Google Antigravity components on Linux: Antigravity IDE, Antigravity 2.0 (Hub), and Antigravity CLI."
 repoUrl: "https://github.com/mozi1924/build-agy"
 homepage: "https://mozi1924.github.io/build-agy/"

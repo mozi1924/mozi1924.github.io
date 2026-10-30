@@ -2,6 +2,8 @@
 title: "yefira"
 name: "yefira"
 slug: "yefira"
+pinned: false
+pinnedOrder: -1
 description: "高性能、低延迟 Minecraft 实时协同伴生模组，直连 Blender (MoziToolKit)。支持 Fabric / Forge / NeoForge 跨 1.20 ~ 26.2+ 多版本。"
 repoUrl: "https://github.com/mozi1924/yefira"
 homepage: "https://github.com/mozi1924/yefira"

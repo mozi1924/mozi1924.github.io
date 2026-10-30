@@ -2,6 +2,8 @@
 title: "mc.tlilng.xyz"
 name: "mc.tlilng.xyz"
 slug: "mctlilngxyz"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/mc.tlilng.xyz"
 homepage: ""

@@ -2,6 +2,8 @@
 title: "jaxlocke.uk"
 name: "jaxlocke.uk"
 slug: "jaxlockeuk"
+pinned: false
+pinnedOrder: -1
 description: "Jax Locke's website"
 repoUrl: "https://github.com/mozi1924/jaxlocke.uk"
 homepage: ""

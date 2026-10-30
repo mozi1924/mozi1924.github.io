@@ -2,6 +2,8 @@
 title: "side-route-daemon"
 name: "side-route-daemon"
 slug: "side-route-daemon"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/side-route-daemon"
 homepage: ""

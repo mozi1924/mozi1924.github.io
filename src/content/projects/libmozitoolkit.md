@@ -2,6 +2,8 @@
 title: "libmozitoolkit"
 name: "libmozitoolkit"
 slug: "libmozitoolkit"
+pinned: false
+pinnedOrder: -1
 description: "高性能宿主无关的 Minecraft 3D 体素几何与资产处理 Rust 核心引擎，MoziToolKit (Blender) 扩展与 Yefira 实时协同底座。"
 repoUrl: "https://github.com/mozi1924/libmozitoolkit"
 homepage: "https://github.com/mozi1924/libmozitoolkit"

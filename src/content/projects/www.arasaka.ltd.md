@@ -2,6 +2,8 @@
 title: "www.arasaka.ltd"
 name: "www.arasaka.ltd"
 slug: "wwwarasakaltd"
+pinned: false
+pinnedOrder: -1
 description: "www.arasaka.ltd 's static pages"
 repoUrl: "https://github.com/mozi1924/www.arasaka.ltd"
 homepage: ""

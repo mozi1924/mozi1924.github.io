@@ -2,6 +2,8 @@
 title: "AgentJax"
 name: "AgentJax"
 slug: "agentjax"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/AgentJax"
 homepage: ""

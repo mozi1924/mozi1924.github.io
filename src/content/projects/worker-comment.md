@@ -2,6 +2,8 @@
 title: "worker-comment"
 name: "worker-comment"
 slug: "worker-comment"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/worker-comment"
 homepage: ""

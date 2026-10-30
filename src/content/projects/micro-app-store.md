@@ -2,6 +2,8 @@
 title: "micro-app-store"
 name: "micro-app-store"
 slug: "micro-app-store"
+pinned: false
+pinnedOrder: -1
 description: "MIUI Home第三方应用商店"
 repoUrl: "https://github.com/mozi1924/micro-app-store"
 homepage: ""

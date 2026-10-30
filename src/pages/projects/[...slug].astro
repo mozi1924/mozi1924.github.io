@@ -82,6 +82,13 @@ const schemaData = {
 
         <!-- Metadata Chips -->
         <div class="flex flex-wrap items-center gap-3 text-xs font-mono">
+          {p.pinned && (
+            <div class="flex items-center gap-1.5 rounded-xl border border-[#3F89FC]/40 bg-[#3F89FC]/15 px-3.5 py-1.5 text-[#3F89FC] font-bold shadow-[0_0_15px_rgba(63,137,252,0.25)]">
+              <span>📌</span>
+              <span>Pinned on GitHub</span>
+            </div>
+          )}
+
           <!-- Language -->
           <div class="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-gray-200">
             <span class="w-2.5 h-2.5 rounded-full bg-[#3F89FC]"></span>

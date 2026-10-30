@@ -2,6 +2,8 @@
 title: "fzs-driver-rs"
 name: "fzs-driver-rs"
 slug: "fzs-driver-rs"
+pinned: false
+pinnedOrder: -1
 description: "完全开源、纯离线、尊重隐私的“夫子说 / 老师说 / 夫子机系列”（如 FZS-C3100A、FZJJ、FZXX）热敏打印机 Rust 重构驱动、后台守护进程与 macOS / Linux CUPS 系统打印集成。"
 repoUrl: "https://github.com/mozi1924/fzs-driver-rs"
 homepage: ""

@@ -2,6 +2,8 @@
 title: "Vercel-Email-routing"
 name: "Vercel-Email-routing"
 slug: "vercel-email-routing"
+pinned: false
+pinnedOrder: -1
 description: ""
 repoUrl: "https://github.com/mozi1924/Vercel-Email-routing"
 homepage: "https://vercel-email-routing.vercel.app"

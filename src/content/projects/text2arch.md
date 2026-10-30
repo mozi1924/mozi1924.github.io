@@ -2,6 +2,8 @@
 title: "text2arch"
 name: "text2arch"
 slug: "text2arch"
+pinned: false
+pinnedOrder: -1
 description: "Text to Arch(Base4) Encryption/Decryption"
 repoUrl: "https://github.com/mozi1924/text2arch"
 homepage: "https://text2arch.mozi1924.com/"

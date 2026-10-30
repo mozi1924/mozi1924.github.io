@@ -4,8 +4,19 @@ import ProjectCard from "../components/ProjectCard.astro";
 import projects from "../data/projects.json";
 import stats from "../data/stats.json";
 
-// Sort projects by stars descending initially
-const initialProjects = [...projects].sort((a, b) => b.stars - a.stars);
+// Pinned projects sorted by their GitHub profile pinnedOrder
+const pinnedProjects = projects
+  .filter((p) => p.pinned)
+  .sort((a, b) => (a.pinnedOrder ?? 99) - (b.pinnedOrder ?? 99));
+
+// Initial sort: Pinned first, then by stars
+const initialProjects = [...projects].sort((a, b) => {
+  if (a.pinned && !b.pinned) return -1;
+  if (!a.pinned && b.pinned) return 1;
+  if (a.pinned && b.pinned) return (a.pinnedOrder ?? 99) - (b.pinnedOrder ?? 99);
+  return b.stars - a.stars;
+});
+
 const uniqueLanguages = ["All", ...Object.keys(stats.languages).sort()];
 
 const schemaData = {
@@ -76,8 +87,48 @@ const schemaData = {
     </div>
   </section>
 
-  <!-- Filter & Search Controls -->
-  <section class="max-w-7xl mx-auto px-6 py-8">
+  <!-- Featured / Pinned Projects Showcase -->
+  {pinnedProjects.length > 0 && (
+    <section class="max-w-7xl mx-auto px-6 pt-12 pb-6">
+      <div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+        <div class="flex items-center gap-3">
+          <span class="flex h-3 w-3 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3F89FC] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#3F89FC]"></span>
+          </span>
+          <h2 class="font-audiowide text-xl sm:text-2xl text-white tracking-wider flex items-center gap-2">
+            <span>FEATURED PROJECTS</span>
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#3F89FC]/15 text-[#3F89FC] border border-[#3F89FC]/30">PINNED</span>
+          </h2>
+        </div>
+        <a
+          href="https://github.com/mozi1924"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs font-mono text-gray-400 hover:text-[#3F89FC] transition-colors flex items-center gap-1"
+        >
+          <span>From GitHub Profile</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pinnedProjects.map((project) => (
+          <ProjectCard project={project} highlightPinned={true} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Filter & Search Controls for All Repositories -->
+  <section class="max-w-7xl mx-auto px-6 pt-8 pb-4">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="font-audiowide text-lg sm:text-xl text-white tracking-wider flex items-center gap-2">
+        <span>ALL REPOSITORIES</span>
+        <span class="text-xs font-mono text-gray-500 font-normal">({projects.length})</span>
+      </h2>
+    </div>
+
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
       <!-- Search Input -->
       <div class="relative w-full md:w-96">
@@ -99,6 +150,7 @@ const schemaData = {
           id="sort-select"
           class="bg-[#161619] border border-white/10 rounded-xl px-3 py-2 text-xs font-medium text-gray-300 focus:outline-none focus:border-[#3F89FC] cursor-pointer"
         >
+          <option value="pinned">Pinned First (📌)</option>
           <option value="stars">Most Stars (★)</option>
           <option value="updated">Recently Updated</option>
           <option value="name">Name (A-Z)</option>
@@ -154,7 +206,7 @@ const schemaData = {
 
     let selectedLang = "all";
     let searchQuery = "";
-    let sortMode = "stars";
+    let sortMode = "pinned";
 
     function update() {
       const cards = Array.from(grid.querySelectorAll("[data-name]")) as HTMLElement[];
@@ -185,7 +237,15 @@ const schemaData = {
 
       // Sort visible cards
       cards.sort((a, b) => {
-        if (sortMode === "stars") {
+        if (sortMode === "pinned") {
+          const aPinned = a.dataset.pinned === "true" ? 1 : 0;
+          const bPinned = b.dataset.pinned === "true" ? 1 : 0;
+          if (aPinned !== bPinned) return bPinned - aPinned;
+          if (aPinned && bPinned) {
+            return (Number(a.dataset.pinnedOrder) || 0) - (Number(b.dataset.pinnedOrder) || 0);
+          }
+          return (Number(b.dataset.stars) || 0) - (Number(a.dataset.stars) || 0);
+        } else if (sortMode === "stars") {
           return (Number(b.dataset.stars) || 0) - (Number(a.dataset.stars) || 0);
         } else if (sortMode === "updated") {
           return new Date(b.dataset.updated || 0).getTime() - new Date(a.dataset.updated || 0).getTime();
