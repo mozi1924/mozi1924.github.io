@@ -1,38 +1,16 @@
 # Mozi's Open Source Hub (`mozi1924.github.io`)
 
-Automated GitHub repository showcase and developer portal for **Mozi Arasaka** ([@mozi1924](https://github.com/mozi1924)).
+> [!NOTE]
+> **This repository has been migrated and is now maintained in the [mozi1924 monorepo](https://github.com/mozi1924/mozi1924).**
+>
+> 🚀 **Live Site**: [https://hub.mozi1924.com](https://hub.mozi1924.com)  
+> 🌐 **Main Website**: [https://mozi1924.com](https://mozi1924.com)  
+> 📂 **Monorepo Source**: [mozi1924/apps/hub](https://github.com/mozi1924/mozi1924/tree/main/apps/hub)
 
-## 🚀 Features
+---
 
-- **Automated Sync**: Scans all public repositories via GitHub REST API, extracts READMEs, and fixes relative links & media URLs.
-- **Modern Dark UI**: Aesthetic inspired by [mozi1924.com](https://mozi1924.com) with Audiowide typography, Tailwind CSS v4, and cyberpunk accents.
-- **Search & Filtering**: Real-time client-side search by repo name, description, topic tags, and programming language.
-- **SEO & Google Indexing**: Auto-generates standard `sitemap.xml`, `robots.txt`, and Schema.org `SoftwareSourceCode` JSON-LD rich snippets.
-- **Zero-maintenance CI/CD**: Runs daily on GitHub Actions via cron schedule and deploys directly to GitHub Pages.
+### Redirection Notice
 
-## 🛠️ Development
+This repository (`mozi1924.github.io`) now serves purely as a lightweight HTTP/DNS redirector to forward any incoming legacy traffic from GitHub Pages to our Cloudflare Pages edge deployment at [hub.mozi1924.com](https://hub.mozi1924.com).
 
-```bash
-# Install dependencies
-pnpm install
-
-# Sync public repos from GitHub (requires GITHUB_TOKEN for unthrottled API access)
-pnpm run sync
-
-# Start development server
-pnpm run dev
-
-# Build static production bundle
-pnpm run build
-```
-
-## 🌐 Custom Subdomain Setup
-
-To attach this project to a custom subdomain of your personal domain (e.g., `projects.mozi1924.com`):
-
-1. Go to repository **Settings** → **Pages** → **Custom domain** and input `projects.mozi1924.com`.
-2. In Cloudflare DNS (or your DNS provider), add a `CNAME` record:
-   - **Type**: `CNAME`
-   - **Name**: `projects`
-   - **Target**: `mozi1924.github.io`
-   - **Proxy status**: DNS only (or Proxied, depending on SSL mode).
+All active development, Astro source code, and GitHub Actions automation workflows have moved to `mozi1924/apps/hub`.
